@@ -10,7 +10,6 @@ import SignIn from "./pages/signIn"
 function App() {
 
   return (
-
     <>
       <BrowserRouter>
         <Header />
@@ -23,7 +22,6 @@ function App() {
         <Footer />
       </BrowserRouter>
     </>
-
   )
 
 }

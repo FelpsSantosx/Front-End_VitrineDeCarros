@@ -3,6 +3,7 @@ import CarouselMarca from "../../components/CarouselMarca"
 import Button from "../../components/Button"
 import Cards from "../../components/Cards"
 import Filtro from "../../assets/filtroImg.png"
+import CarList from "../../components/CarList"
 
 
 const CarShowcase = forwardRef((props, ref) => {
@@ -29,12 +30,7 @@ const CarShowcase = forwardRef((props, ref) => {
 
             <div className="flex flex-col md:flex-row justify-center flex-wrap gap-4 py-4 md:p-8 my-8 md:m-12 rounded-md md:rounded-2xl bg-white">
 
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
+                <CarList />
 
                 {/* <div> Criar Paginação no Back-end </div> */}
 

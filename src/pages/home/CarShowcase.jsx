@@ -1,7 +1,6 @@
 import React, { forwardRef } from "react"
 import CarouselMarca from "../../components/CarouselMarca"
 import Button from "../../components/Button"
-import Cards from "../../components/Cards"
 import Filtro from "../../assets/filtroImg.png"
 import CarList from "../../components/CarList"
 

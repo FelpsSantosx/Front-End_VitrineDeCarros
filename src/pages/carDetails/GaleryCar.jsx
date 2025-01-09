@@ -1,21 +1,9 @@
 import React, { useState } from "react"
-import Frente from "../../assets/Frente.png"
-import Cadeiras from  "../../assets/Cadeiras.png"
-import Diagonal from "../../assets/DiagonalFrente.png"
 
-
-const GaleyCar = () => {
+const GaleyCar = ({ images = [] }) => {
     const [activeGaleyIndex, setActiveGaleyIndex] = useState(0)
 
-    const images = [
-       Frente,
-       Cadeiras,
-       Diagonal,
-       Cadeiras,
-    ]
-    
-
-    const visibleGalery = 3
+       const visibleGalery = 3
 
     const nextGaley = () => {
         setActiveGaleyIndex((prevIndex) =>

@@ -36,7 +36,7 @@ const CarouselMarca = () => {
       >
         {images.map((src, index) => (
           <div key={index} className=" flex flex-shrink-0 justify-center w-1/3 px-2">
-            <img rounded-3xl
+            <img 
               src={src}
               alt={`Slide ${index + 1}`}
               className="w-full md:w-auto object-contain rounded-full "

@@ -12,8 +12,6 @@ const CarDetails = () => {
 
     useEffect(() => {
 
-       
-
         const fetchCarDetails = async (id) => {
             try {
                 const response = await api.get(`/cars/${id}`)
@@ -43,7 +41,7 @@ const CarDetails = () => {
 
     return (
         <>
-            <GaleyCar images={carDetails.images} />
+            <GaleyCar images={carDetails.galeria} />
             <InfoModel details={carDetails} />
         </>
     )

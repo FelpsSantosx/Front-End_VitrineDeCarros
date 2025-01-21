@@ -69,7 +69,7 @@ const InfoModel = ({ details }) => {
                     <div className="grid grid-cols-5 items-center justify-items-center gap-3 px-2">
                         <div className="col-span-2">
                             <p className="text-h5 text-sm">Valor anuciado</p>
-                            <h2 className="text-h4">R$ {preco}</h2>
+                            <h2 className="text-h4">R${preco}</h2>
                         </div>
                         <div>
                             <img src={Logo} alt="Logo" />
@@ -83,7 +83,7 @@ const InfoModel = ({ details }) => {
 
                 <div className="col-start-2 md:col-start-8 col-span-9 md:col-span-4 row-start-3 md:row-start-1 row-span-3 md:row-span-4 my-4 bg-primary">
                     <div className="bg-second text-primary rounded-t-2xl text-left p-4">
-                        <h2 className="text-h3">R$ 280.000</h2>
+                        <h2 className="text-h3">R${preco}</h2>
                         <h5 className="text-h4 text-sm">Envie uma mensagem ao vendendor</h5>
                     </div>
                     <div className="flex flex-col items-center gap-6 pt-5">

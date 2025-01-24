@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import Cards from "./Cards";
 import { getCars } from "../api";
+import Pagination from "./pagination";
 
 const CarList = () => {
-  const [cars, setCars] = useState([]);
-  const [page, setPage] = useState(1);
-  const [limit] = useState(10);
-  const [totalPages, setTotalPages] = useState(1);
+  const [cars, setCars] = useState([]); // Lista de carros
+  const [currentPage, setCurrentPage] = useState(1); // Página atual
+  const [totalPages, setTotalPages] = useState(1); // Total de páginas
+  const limit = 9; // Número de carros por página
 
-  const fetchCars = async () => {
+  const fetchCars = async (page) => {
     const { cars: carList, totalPages: totalPagesFromApi } = await getCars(
       page,
       limit
@@ -21,21 +22,10 @@ const CarList = () => {
 
 
   useEffect(() => {
-    fetchCars();
-  }, [page, limit]);
+    fetchCars(currentPage);
+  }, [currentPage]);
 
-  const handleNextPage = () => {
-    if (page < totalPages) {
-      setPage((prevPage) => prevPage + 1);
-    }
-  };
 
-  // Navegar para a página anterior
-  const handlePrevPage = () => {
-    if (page > 1) {
-      setPage((prevPage) => prevPage - 1);
-    }
-  };
 
   return (
     <div>
@@ -47,25 +37,11 @@ const CarList = () => {
       </div>
 
       {/* Controles de paginação */}
-      <div className="flex justify-between items-center mt-6">
-        <button
-          onClick={handlePrevPage}
-          disabled={page === 1}
-          className="px-4 py-2 bg-gray-300 rounded disabled:opacity-50"
-        >
-          Anterior
-        </button>
-        <span>
-          Página {page} de {totalPages}
-        </span>
-        <button
-          onClick={handleNextPage}
-          disabled={page === totalPages}
-          className="px-4 py-2 bg-gray-300 rounded disabled:opacity-50"
-        >
-          Próxima
-        </button>
-      </div>
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={(page) => setCurrentPage(page)}
+      />
     </div>
   );
 };

@@ -28,4 +28,19 @@ export const getCarById = async (id) => {
     }
 }
 
+export const searchCars = async (filters) => {
+    try {
+        const queryParams = new URLSearchParams(
+            Object.fromEntries(
+                Object.entries(filters).filter(([_, value]) => value) // Remove filtros vazios
+            )
+        ).toString();
+        const response = await api.get(`/search?${queryParams}`)
+        return await response.data
+    } catch (error) {
+        console.error("Erro na api de buscar os carros:", error)
+        return []
+    }
+}
+
 export default api

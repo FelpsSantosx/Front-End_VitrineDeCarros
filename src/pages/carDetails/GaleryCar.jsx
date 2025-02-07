@@ -34,7 +34,7 @@ const GaleyCar = ({ images = [] }) => {
         {images.map((src, index) => (
           <div key={index} className="flex-shrink-0 w-1/3">
             <img
-              src={`http://localhost:3000${src}`} // Corrigir o caminho da imagem
+              src={src} // Corrigir o caminho da imagem
               alt={`Slide ${index + 1}`}
               className="w-full md:w-auto object-contain"
             />

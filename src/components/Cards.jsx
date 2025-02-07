@@ -15,7 +15,7 @@ const Cards = ({ car }) => {
       <div className="flex flex-row md:flex-col w-auto md:w-[380px] bg-primary">
         <div className="md:w-[380px]">
           <img 
-            src={`http://localhost:3000${car.imagemPrincipal}`}
+            src={car.imagemPrincipal}
             alt={car.modelo}
           />
         </div>

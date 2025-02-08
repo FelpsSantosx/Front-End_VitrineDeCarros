@@ -1,7 +1,7 @@
 import React, { forwardRef, useState } from "react"
 import CarouselMarca from "../../components/CarouselMarca"
 import Button from "../../components/Button"
-import Filtro from "../../assets/filtroImg.png"
+import Filtro from "../../assets/FiltroImg.png"
 import CarList from "../../components/CarList"
 import FilterModal from "../../components/FilterModal"
 import { searchCars } from "../../api"

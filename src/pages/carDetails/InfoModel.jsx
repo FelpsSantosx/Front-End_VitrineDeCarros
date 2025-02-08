@@ -42,7 +42,7 @@ const InfoModel = ({ details }) => {
     setWhatsAppLink("")
     try {
       const response = await axios.post(
-        "http://localhost:3000/messages/message",
+        "https://back-end-topcaronline.onrender.com/messages/message",
         {
           nome,
           email,

@@ -31,7 +31,7 @@ const Cards = ({ car }) => {
             <Button className="hidden md:block">Ver Oferta</Button>
             <div className="flex flex-row justify-between py-2">
               <p className="text-h5">{car.ano}</p>
-              <p className="text-h5">{car.quilometragem}</p>
+              <p className="text-h5">{car.quilometragem} KM</p>
             </div>
           </Link>
           <div className="hidden md:flex flex-col px-2 w-full">

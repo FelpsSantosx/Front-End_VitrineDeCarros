@@ -76,7 +76,6 @@ const CarShowcase = forwardRef((props, ref) => {
                 <CarList filters={filters} searchResults={searchResults} />
             </div>
 
-            {/* Paginação */}
             <div className="flex justify-center gap-4">
                 {pagination.page > 1 && (
                     <button

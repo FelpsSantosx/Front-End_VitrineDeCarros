@@ -29,7 +29,7 @@ const Cards = ({ car }) => {
               R$ {car.preco || "Não informado"}
             </h3>
             <Button className="hidden md:block">Ver Oferta</Button>
-            <div className="flex flex-row justify-between py-2">
+            <div className="flex flex-row justify-between py-2">po
               <p className="text-h5">{car.ano}</p>
               <p className="text-h5">{car.quilometragem} KM</p>
             </div>

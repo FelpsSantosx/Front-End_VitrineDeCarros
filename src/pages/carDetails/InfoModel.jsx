@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import axios from "axios"
-import SuperDesconto from "../../assets/super-oferta.png"
-import Logo from "../../assets/TopCarOnline_Logo.png"
-import SuperOferta from "../../assets/oferta.png"
-import Button from "../../components/Button"
+import axios from "axios";
+import SuperDesconto from "../../assets/super-oferta.png";
+import Logo from "../../assets/TopCarOnline_Logo.png";
+import SuperOferta from "../../assets/oferta.png";
+import Button from "../../components/Button";
 
 const InfoModel = ({ details }) => {
   const {
@@ -17,14 +17,14 @@ const InfoModel = ({ details }) => {
     cidade,
     preco,
     fipe,
-  } = details
+  } = details;
 
-  const [nome, setNome] = useState("")
-  const [email, setEmail] = useState("")
-  const [fone, setFone] = useState("")
-  const [mensagem, setMensagem] = useState("")
-  const [whatsAppLink, setWhatsAppLink] = useState("")
-  const [loading, setLoading] = useState(false)
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [fone, setFone] = useState("");
+  const [mensagem, setMensagem] = useState("");
+  const [whatsAppLink, setWhatsAppLink] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const carro = {
     modelo,
@@ -33,13 +33,13 @@ const InfoModel = ({ details }) => {
     cambio,
     combustivel,
     cor,
-    quilometragem
-  }
+    quilometragem,
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setLoading(true)
-    setWhatsAppLink("")
+    e.preventDefault();
+    setLoading(true);
+    setWhatsAppLink("");
     try {
       const response = await axios.post(
         "https://back-end-topcaronline.onrender.com/messages/message",
@@ -50,20 +50,20 @@ const InfoModel = ({ details }) => {
           mensagem,
           carro,
         }
-      )
+      );
       if (response.status === 201) {
-        setWhatsAppLink(response.data.whatsAppLink)
-        alert("Mensagem enviada com sucesso!")
+        setWhatsAppLink(response.data.whatsAppLink);
+        alert("Mensagem enviada com sucesso!");
       } else {
-        alert("Erro: " + response.data.error)
+        alert("Erro: " + response.data.error);
       }
     } catch (error) {
-      console.error("Erro ao enviar mensagem:", error)
-      alert("Ocorreu um erro. Tente novamente.")
+      console.error("Erro ao enviar mensagem:", error);
+      alert("Ocorreu um erro. Tente novamente.");
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   return (
     <section className="font-montserrat">
@@ -200,7 +200,10 @@ const InfoModel = ({ details }) => {
           )}
         </div>
       </div>
+
+      {/* Testando novo modelo de estilização */}
+
     </section>
-  )
-}
-export default InfoModel
+  );
+};
+export default InfoModel;

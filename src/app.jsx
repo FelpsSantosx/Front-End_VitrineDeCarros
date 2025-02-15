@@ -5,7 +5,6 @@ import Footer from "./components/Footer"
 import Home from "./pages/home"
 import About from "./pages/about"
 import CarDetails from "./pages/carDetails"
-import SignIn from "./pages/signIn"
 
 function App() {
 
@@ -17,7 +16,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/carDetails/:id" element={<CarDetails />} />
-          <Route path="/signIn" element={<SignIn />} />
         </Routes>
         <Footer />
       </BrowserRouter>

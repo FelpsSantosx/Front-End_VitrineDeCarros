@@ -38,7 +38,6 @@ const Header = () => {
             <Link to="/"><img src={logo} alt="LogoMarca" className='h-10 md:h-auto' /></Link>
             <nav className='hidden md:flex space-x-10'>
                 <Link className='text-h3  text-fourth hover:text-hover p-3' to="/about">Sobre Nós</Link>
-                <Link className='text-h3 text-fourth hover:text-hover p-3' to="/signIn">Entrar</Link>
             </nav>
             <button onClick={toggleMenu} className='md:hidden focus:outline-none text-fourth' aria-label='Abrir Menu'>
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +47,6 @@ const Header = () => {
 
             {isMenuOpen && (<nav className="absolute top-10 right-0 bg-second text-fourth p-5 shadow-lg flex flex-col space-y-4 md:hidden">
                 <Link className='text-h3 hover:text-hover' to="/about">Sobre Nós</Link>
-                <Link className='text-h3 hover:text-hover' to="/signIn">Entrar</Link>
             </nav>)}
         </header>
 

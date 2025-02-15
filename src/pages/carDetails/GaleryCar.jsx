@@ -22,7 +22,7 @@ const GaleyCar = ({ images = [] }) => {
   return (
     console.log(images),
 
-    <div className="relative w-full z-15 overflow-hidden max-w-screen-xl mx-auto ">
+    <div className="relative w-full z-15 overflow-hidden max-w-screen-xl mx-auto">
       <div
         className="flex transition-transform duration-700 ease-in-out  "
         style={{

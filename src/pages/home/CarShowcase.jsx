@@ -50,10 +50,11 @@ const CarShowcase = forwardRef((props, ref) => {
                         type="search"
                         name="searchBar"
                         id="searchBar"
-                        placeholder="Pesquisar"
+                        placeholder="Digite o modelo do carro"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className="rounded-2xl bg-white text-h5 md:text-h3 py-2 md:py-4 pl-4 md:pl-8"
+                        onKeyDown={(e) => e.key === "Enter" && handleSearch()} // Pesquisa ao pressionar Enter
+                        className="outline-none rounded-2xl bg-white text-h5 md:text-h3 py-2 md:py-4 pl-4 md:pl-8"
                     />
                     <button onClick={handleOpenFilterModal}>
                         <img src={Filtro} alt="Filtro" />

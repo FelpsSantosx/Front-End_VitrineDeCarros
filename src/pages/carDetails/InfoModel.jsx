@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import SuperDesconto from "../../assets/super-oferta.png";
 import Logo from "../../assets/TopCarOnline_Logo.png";
 import SuperOferta from "../../assets/oferta.png";
 import Button from "../../components/Button";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
 
 const InfoModel = ({ details }) => {
   const {
@@ -20,8 +24,6 @@ const InfoModel = ({ details }) => {
   } = details;
 
   const [nome, setNome] = useState("");
-  const [email, setEmail] = useState("");
-  const [fone, setFone] = useState("");
   const [mensagem, setMensagem] = useState("");
   const [whatsAppLink, setWhatsAppLink] = useState("");
   const [loading, setLoading] = useState(false);
@@ -36,30 +38,35 @@ const InfoModel = ({ details }) => {
     quilometragem,
   };
 
+  useEffect(() => {
+    if (whatsAppLink) {
+      window.open(whatsAppLink, "_blank");
+    }
+  }, [whatsAppLink]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setWhatsAppLink("");
     try {
       const response = await axios.post(
-        "https://back-end-topcaronline.onrender.com/messages/message",
+        // "https://back-end-topcaronline.onrender.com/messages/message" ,
+        "http://localhost:3000/messages/message",
         {
           nome,
-          email,
-          telefone: fone,
           mensagem,
           carro,
         }
       );
       if (response.status === 201) {
         setWhatsAppLink(response.data.whatsAppLink);
-        alert("Mensagem enviada com sucesso!");
+        toast.success("Mensagem enviada com sucesso! ✅");
       } else {
         alert("Erro: " + response.data.error);
       }
     } catch (error) {
       console.error("Erro ao enviar mensagem:", error);
-      alert("Ocorreu um erro. Tente novamente.");
+      toast.error("Ocorreu um erro. Tente novamente.");
     } finally {
       setLoading(false);
     }
@@ -151,24 +158,6 @@ const InfoModel = ({ details }) => {
               onChange={(e) => setNome(e.target.value)}
               required
             />
-            <input
-              className="w-72 md:w-11/12 rounded-md py-1 pl-2 text-h5"
-              id="email"
-              type="email"
-              placeholder="E-mail"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <input
-              className="w-72 md:w-11/12 rounded-md py-1 pl-2 text-h5"
-              id="fone"
-              type="tel"
-              placeholder="Telefone"
-              value={fone}
-              onChange={(e) => setFone(e.target.value)}
-              required
-            />
             <textarea
               className="w-72 md:w-11/12 rounded-md py-1 pl-2 text-h5"
               name="Message"
@@ -186,23 +175,11 @@ const InfoModel = ({ details }) => {
               {loading ? "Enviando..." : "Enviar mensagem"}
             </Button>
           </form>
-          {whatsAppLink && (
-            <div className="mt-4">
-              <a
-                href={whatsAppLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 underline"
-              >
-                Abrir WhatsApp
-              </a>
-            </div>
-          )}
         </div>
       </div>
-
+      {/* Inclua o ToastContainer para que as notificações apareçam */}
+      <ToastContainer />
       {/* Testando novo modelo de estilização */}
-
     </section>
   );
 };

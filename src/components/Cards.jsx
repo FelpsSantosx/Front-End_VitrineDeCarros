@@ -10,8 +10,7 @@ const Cards = ({ car }) => {
   };
 
   return (
-    console.log(car),
-    (
+    
       <div className="flex flex-row md:flex-col w-auto md:w-[380px] bg-primary">
         <div className="md:w-[380px]">
           <img 
@@ -29,7 +28,7 @@ const Cards = ({ car }) => {
               R$ {car.preco || "Não informado"}
             </h3>
             <Button className="hidden md:block">Ver Oferta</Button>
-            <div className="flex flex-row justify-between py-2">po
+            <div className="flex flex-row justify-between py-2">
               <p className="text-h5">{car.ano}</p>
               <p className="text-h5">{car.quilometragem} KM</p>
             </div>
@@ -52,7 +51,7 @@ const Cards = ({ car }) => {
           </div>
         </div>
       </div>
-    )
+    
   );
 };
 

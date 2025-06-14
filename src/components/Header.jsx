@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../assets/TopCarOnline_Logo.png'
+import logo from '../assets/logo.png'
 
 const Header = () => {
     const [isHeaderVisible, setIsHeaderVisible] = useState(true)
@@ -35,7 +35,7 @@ const Header = () => {
 
         <header className={`fixed z-10 flex items-center justify-between md:top-2 md:left-40 md:right-40 w-full md:w-auto py-2 md:py-1 px-5 md:px-10 md:rounded-lg bg-second text-fourth
             transition-transform duration-300 ease-in-out ${isHeaderVisible ? 'translate-y-0' : '-translate-y-40'} `}>
-            <Link to="/"><img src={logo} alt="LogoMarca" className='h-10 md:h-auto' /></Link>
+            <Link to="/" className='h-10 md:h-auto'>SUA LOGO</Link>
             <nav className='hidden md:flex space-x-10'>
                 <Link className='text-h3  text-fourth hover:text-hover p-3' to="/about">Sobre Nós</Link>
             </nav>

@@ -8,8 +8,8 @@ const Info = () => {
                 apaixonados por carros, comprometidos em fornecer o melhor atendimento
                 ao cliente. Para saber mais sobre nossa empresa 
                 ou nossos serviços, entre em contato conosco pelo telefone 
-                <strong className="text-third">  71 98849 7565 </strong>o
-                u e-mail<strong className="text-third"> topcaronline@gmail.com</strong>
+                <strong className="text-third"> "(00)00000 0000" </strong>o
+                u e-mail<strong className="text-third"> SUAEMPRESA@gmail.com</strong>
                 </h4>
         </div>
 

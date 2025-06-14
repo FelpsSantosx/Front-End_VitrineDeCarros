@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import SuperDesconto from "../../assets/super-oferta.png";
-import Logo from "../../assets/TopCarOnline_Logo.png";
+import Logo from "../../assets/logo.png";
 import SuperOferta from "../../assets/oferta.png";
 import Button from "../../components/Button";
 import { ToastContainer, toast } from "react-toastify";

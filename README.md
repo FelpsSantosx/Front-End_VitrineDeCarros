@@ -1,64 +1,74 @@
-# Vitrine de carros
+# Vitrine de Carros
 
-Este projeto é uma loja virtual de carros, construída com as seguintes tecnologias:
+O projeto Vitrine de Carros é uma loja virtual moderna e responsiva destinada a exibir, filtrar e detalhar carros disponíveis para venda. Ele oferece aos usuários a capacidade de encontrar veículos de acordo com suas preferências, visualizar informações detalhadas e entrar em contato diretamente com o vendedor.
 
-- [React](https://pt-br.reactjs.org/) como framework frontend
-- [Vite](https://vitejs.dev/) como ferramenta de build e desenvolvimento
-- [TypeScript](https://www.typescriptlang.org/) como linguagem de programação
-- [Tailwind CSS](https://tailwindcss.com/) como framework CSS
-- [Material Tailwind](https://www.material-tailwind.com/) como tema para o projeto
-- [React Router](https://reactrouter.com/) como roteador
-- [React Query](https://react-query.tanstack.com/) como gerenciador de estado global
-- [Axios](https://axios-http.com/) como cliente HTTP
+## Tecnologias Utilizadas
 
-## Como usar o código
+- **[React](https://pt-br.reactjs.org/):** Framework para construção da interface.
+- **[Vite](https://vitejs.dev/):** Ferramenta de build e desenvolvimento rápido.
+- **[TypeScript](https://www.typescriptlang.org/):** Linguagem de programação.
+- **[Tailwind CSS](https://tailwindcss.com/):** Framework CSS utilitário.
+- **[Material Tailwind](https://www.material-tailwind.com/):** Tema visual.
+- **[React Router](https://reactrouter.com/):** Gerenciamento de rotas.
+- **[React Query](https://react-query.tanstack.com/):** Gerenciamento de estado global.
+- **[Axios](https://axios-http.com/):** Cliente HTTP.
 
-1. Clone o repositório
-2. Execute o comando `npm install` para instalar as dependências
-3. Execute o comando `npm run dev` para iniciar o servidor de desenvolvimento
-4. Abra o navegador e acesse o endereço `http://localhost:3000`
+## Instalação e Configuração
 
-## Funcionalidades
+1. **Clone o repositório:**
 
-- Listagem de carros
-- Detalhes de cada carro
-- Filtros de busca por marca, modelo e ano
-- Paginação
-- Galeria de imagens para cada carro
+2. **Instale as dependências:**
 
-## Arquitetura
+3. **Configure as variáveis de ambiente:**
+   - Crie um arquivo `.env` na raiz do projeto e defina a variável `VITE_API_URL` com a URL da sua API backend.
 
-A estrutura de pastas do projeto é a seguinte:
+4. **Inicie o servidor de desenvolvimento:**
 
-- `public/`: pasta contendo arquivos estáticos como imagens e icones
-- `src/`: pasta contendo o código fonte do projeto
+5. **Acesse no navegador:**
+   - Abra [http://localhost:3000](http://localhost:3000)
 
-Dentro da pasta `src/` temos as seguintes subpastas:
+## Funcionalidades Principais
 
-- `api/`: pasta contendo as funções de API que fazem requisições HTTP
-- `app.jsx`: arquivo que renderiza o componente principal do projeto
-- `app.jsx`: arquivo que renderiza o componente principal do projeto
-- `components/`: pasta contendo os componentes reutilizáveis do projeto
-- `pages/`: pasta contendo os componentes de página do projeto
-- `styles/`: pasta contendo os arquivos de estilo do projeto, incluindo o arquivo `tailwind.config.js` de configuração do Tailwind CSS
+- **Listagem de Carros:** Exibe uma lista de carros disponíveis com informações como modelo, preço, ano e quilometragem.
+- **Detalhes do Carro:** Oferece uma página detalhada com informações completas, galeria de imagens e comparação de preço com a tabela FIPE.
+- **Filtros de Busca:** Possibilita filtrar carros por diversos critérios como modelo, preço, ano, câmbio, combustível e cor.
+- **Paginação:** Navegação entre páginas de resultados para uma melhor visualização.
+- **Galeria de Imagens:** Cada carro possui uma galeria navegável de imagens.
+- **Contato com o Vendedor:** Integração com WhatsApp para envio de mensagens.
+- **Lojas Associadas:** Carrossel de marcas parceiras.
+- **Página Sobre:** Informações institucionais sobre a empresa, incluindo missão e valores.
 
-Dentro da pasta `components/` temos as seguintes subpastas:
+## Estrutura do Projeto
 
-- `Cards/`: pasta contendo os componentes de cartões que exibem as informações dos carros
-- `Carousel/`: pasta contendo os componentes de carrossel que exibem as imagens dos carros
-- `FilterModal/`: pasta contendo o componente de modal que abre quando o usuário clica no botão de filtro
-- `Pagination/`: pasta contendo o componente de paginação que exibe as páginas de carros
+- `public/`: Arquivos estáticos como imagens e ícones.
+- `src/`: Código fonte do projeto.
 
-Dentro da pasta `pages/` temos as seguintes subpastas:
+### Dentro de `src/`:
 
-- `about/`: pasta contendo as páginas de informações sobre a empresa
-- `carDetails/`: pasta contendo as páginas de detalhes de cada carro
-- `home/`: pasta contendo a página principal do projeto que lista os carros
+- `api/`: Funções de API para requisições HTTP.
+- `app.jsx`: Renderiza o componente principal do projeto.
+- `components/`: Componentes reutilizáveis.
+- `pages/`: Componentes de página.
+- `styles/`: Arquivos de estilo, incluindo `tailwind.config.js`.
 
-## Requisitos para rodar o projeto
+### Dentro de `components/`:
 
-- Node.js 16.0.0 ou superior
-- NPM 7.10.0 ou superior
-- Yarn 1.22.0 ou superior (opcional)
-- React 17.0.2 ou superior
-- Vite 2.9.13 ou superior
+- `Cards/`: Componentes de cartões para informações dos carros.
+- `Carousel/`: Componentes de carrossel para imagens.
+- `FilterModal/`: Modal para filtros avançados.
+- `Pagination/`: Componente de paginação.
+
+### Dentro de `pages/`:
+
+- `about/`: Páginas de informações da empresa.
+- `carDetails/`: Páginas de detalhes dos carros.
+- `home/`: Página principal listando os carros.
+
+## Requisitos para Rodar o Projeto
+
+- **Node.js:** 16.0.0 ou superior
+- **NPM:** 7.10.0 ou superior
+- **Yarn:** 1.22.0 ou superior (opcional)
+- **React:** 17.0.2 ou superior
+- **Vite:** 2.9.13 ou superior
+

@@ -50,8 +50,7 @@ const InfoModel = ({ details }) => {
     setWhatsAppLink("");
     try {
       const response = await axios.post(
-        // "https://back-end-topcaronline.onrender.com/messages/message" ,
-        "http://localhost:3000/messages/message",
+        import.meta.env.VITE_API_URL + "/messages/message",
         {
           nome,
           mensagem,
